@@ -16,7 +16,7 @@
               <i class="g-color-gray-light-v2 g-ml-5 fa fa-angle-right"></i>
             </li>
             <li class="list-inline-item g-color-primary">
-              <span>Contact Us</span>
+              <span>Contato</span>
             </li>
           </ul>
         </div>
@@ -24,15 +24,8 @@
       <!-- End Breadcrumbs -->
 
       <!-- Google Map -->
-      <div id="GMapCustomized-light" class="js-g-map embed-responsive embed-responsive-21by9 g-height-400"
-           data-type="custom"
-           data-lat="40.674"
-           data-lng="-73.946"
-           data-zoom="12"
-           data-title="Agency"
-           data-styles='[["", "", [{"saturation":-100},{"lightness":40},{"visibility":"simplified"}]], ["", "labels", [{"visibility":"on"}]], ["water", "", [{"color":"#CAD2D4"}]] ]'
-           data-pin="true"
-           data-pin-icon="assets/img/icons/pin/img1.png">
+      <div id="GMapCustomized-light" class="js-g-map embed-responsive embed-responsive-21by9 g-height-400">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1919.58007113554!2d-47.88589474192537!3d-15.795507716334072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae1a7d10a65%3A0x1a9a9836ec541750!2sCart%C3%A3o%20MasterClin!5e0!3m2!1spt-BR!2sbr!4v1609759827778!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
       <!-- End Google Map -->
 
@@ -46,10 +39,10 @@
                 <i class="d-inline-block g-color-primary g-font-size-40 g-pos-rel g-top-3 icon-communication-062 u-line-icon-pro"></i>
               </div>
               <div class="media-body">
-                <span class="d-block g-font-weight-500 g-font-size-default text-uppercase mb-2">Phone Numbers</span>
+                <span class="d-block g-font-weight-500 g-font-size-default text-uppercase mb-2">Telefones</span>
                 <ul class="list-unstyled mb-0">
-                  <li class="d-block g-color-gray-dark-v4">+(01) 05-682-0355</li>
-                  <li class="d-block g-color-gray-dark-v4">+(01) 95-814-8535</li>
+                  <li class="d-block g-color-gray-dark-v4">+(55) xxxx-xxxx</li>
+                  <li class="d-block g-color-gray-dark-v4">+(55) 95814-8535</li>
                 </ul>
               </div>
             </div>
@@ -63,8 +56,8 @@
                 <i class="d-inline-block g-color-primary g-font-size-40 g-pos-rel g-top-3 icon-real-estate-027 u-line-icon-pro"></i>
               </div>
               <div class="media-body">
-                <span class="d-block g-font-weight-500 g-font-size-default text-uppercase mb-2">Location</span>
-                <span class="d-block g-color-gray-dark-v4">972 Sylvan Street South Angelina, NL S0B2V9</span>
+                <span class="d-block g-font-weight-500 g-font-size-default text-uppercase mb-2">Locação </span>
+                <span class="d-block g-color-gray-dark-v4">Brasilia</span>
               </div>
             </div>
             <!-- End Media -->
@@ -77,10 +70,10 @@
                 <i class="d-inline-block g-color-primary g-font-size-40 g-pos-rel g-top-3 icon-hotel-restaurant-249 u-line-icon-pro"></i>
               </div>
               <div class="media-body text-left">
-                <span class="d-block g-font-weight-500 g-font-size-default text-uppercase mb-2">Office Hours</span>
+                <span class="d-block g-font-weight-500 g-font-size-default text-uppercase mb-2">Horarios</span>
                 <ul class="list-unstyled mb-0">
-                  <li class="d-block g-color-gray-dark-v4">Mon - Fri: 09AM to 06PM</li>
-                  <li class="d-block g-color-gray-dark-v4">Sat - Sun: 10AM to 04PM</li>
+                  <li class="d-block g-color-gray-dark-v4">Seg - Sex: 09AM to 06PM</li>
+                  <li class="d-block g-color-gray-dark-v4">Sab - Dom: 10AM to 04PM</li>
                 </ul>
               </div>
             </div>
@@ -90,8 +83,8 @@
         <!-- End Contact Info -->
 
         <div class="g-max-width-645 text-center mx-auto g-mb-70">
-          <h2 class="h1 mb-3">Contact Us</h2>
-          <p class="g-font-size-17 mb-0">Fill up the form and hit the "Send Message". One of our representatives will get back to you as soon as possible.</p>
+          <h2 class="h1 mb-3">Entre em contato</h2>
+          <p class="g-font-size-17 mb-0">Envie uma menssagem para nos e nos retornaremos assim que possivel </p>
         </div>
 
         <!-- Contact Form -->
