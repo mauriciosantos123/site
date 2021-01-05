@@ -225,7 +225,7 @@
     <div class="row justify-content-between align-items-center">
       <div class="col-md-8 col-lg-6 order-md-2 g-mb-30">
         <div class="g-pos-rel">
-          <img class="img-fluid w-100" src="$products_img_destaque" id="1" alt="Image Description">
+          <img class="img-fluid w-100" src="$products_img_destaque" alt="Image Description">
           <span class="u-icon-v1 g-width-85 g-height-85 g-brd-3 g-brd-white g-color-white g-bg-primary g-font-weight-300 g-font-size-22 rounded-circle g-pos-abs g-top-100 g-left-0 g-brd-around">
             <i class="g-font-style-normal">R$20
               <span class="g-font-size-16">.00</span>
@@ -288,26 +288,27 @@
   </div>
 
   <div class="row g-mx-minus-10 g-mb-50">
+    @foreach($listaProdutos2 as $produtos)
     <div class="col-md-6 col-lg-4 g-px-10">
       <!-- Article -->
       <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
         <!-- Article Image -->
         <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img1.jpg" alt="Image Description">
+          <img class="d-flex w-100" src="{{$produtos->products_thumbnail}}" alt="Image Description">
         </div>
         <!-- End Article Image -->
 
         <!-- Article Info -->
         <div class="media-body align-self-center">
           <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}">Oculos</a>
+            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}">{{$produtos->products_name}}</a>
           </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="#">Acessorios</a>
+          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="#">{{$produtos->categoria_name}}</a>
           <!-- End Article Info -->
 
           <!-- Article Footer -->
           <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$22.00</span>
+            <span class="g-color-black g-line-height-1">${{$produtos->products_price}}</span>
             <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
               <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
                 <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}" title="Adicionar ao carrinho" data-toggle="tooltip" data-placement="top">
@@ -326,322 +327,11 @@
       </article>
       <!-- End Article -->
     </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img2.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}">Luvas</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="{{route('categoria.index')}}">Acessorios</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Footer -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img3.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}">Chukka Shoes</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="{{route('categoria.index')}}">Footwear</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Footer -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img4.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}">Shoes</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="{{route('categoria.index')}}">Footwear</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Content -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img5.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}">Sneaker</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="{{route('categoria.index')}}">Footwear</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Content -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img6.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="#">Sneaker</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="#">Footwear</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Footer -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img7.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="#">Desk Clock</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="#">Hi-Tech</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Footer -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img8.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="#">Alarm Clock</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="#">Hi-Tech</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Footer -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
-
-    <div class="col-md-6 col-lg-4 g-px-10">
-      <!-- Article -->
-      <article class="media g-brd-around g-brd-gray-light-v4 g-bg-white rounded g-pa-10 g-mb-20">
-        <!-- Article Image -->
-        <div class="g-max-width-100 g-mr-15">
-          <img class="d-flex w-100" src="assets/img-temp/150x150/img9.jpg" alt="Image Description">
-        </div>
-        <!-- End Article Image -->
-
-        <!-- Article Info -->
-        <div class="media-body align-self-center">
-          <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="#">Desk Clock</a>
-          </h4>
-          <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="#">Hi-Tech</a>
-          <!-- End Article Info -->
-
-          <!-- Article Footer -->
-          <footer class="d-flex justify-content-between g-font-size-16">
-            <span class="g-color-black g-line-height-1">$55.00</span>
-            <ul class="list-inline g-color-gray-light-v2 g-font-size-14 g-line-height-1">
-              <li class="list-inline-item align-middle g-brd-right g-brd-gray-light-v3 g-pr-10 g-mr-6">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Cart" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-finance-100 u-line-icon-pro"></i>
-                </a>
-              </li>
-              <li class="list-inline-item align-middle">
-                <a class="g-color-gray-dark-v5 g-color-primary--hover g-text-underline--none--hover" href="#" title="Add to Wishlist" data-toggle="tooltip" data-placement="top">
-                  <i class="icon-medical-022 u-line-icon-pro"></i>
-                </a>
-              </li>
-            </ul>
-          </footer>
-          <!-- End Article Footer -->
-        </div>
-      </article>
-      <!-- End Article -->
-    </div>
+    @endforeach()
   </div>
 
   <div class="text-center">
-    <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="#">All New Arrivals</a>
+    <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25" href="{{route('produto.index')}}">Todas as novidades </a>
   </div>
 </section>
 <!-- End New Arrivals -->
@@ -651,9 +341,9 @@
   <div class="row align-items-center no-gutters">
     <div class="col-md-7 col-lg-8 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered" data-bg-img-src="assets/img-temp/1200x800/img1.jpg">
       <div class="g-flex-centered-item text-right g-pa-50">
-        <h2 class="g-color-white g-font-weight-700 g-font-size-50 text-uppercase g-line-height-1 mb-4">Summer
+        <h2 class="g-color-white g-font-weight-700 g-font-size-50 text-uppercase g-line-height-1 mb-4">{{$categoria->name}}
           <br>
-          Collection
+          {{$categoria->collection}}
         </h2>
         <span class="u-link-v5 g-color-black g-color-primary--hover g-font-size-18">Compre agora</span>
       </div>
@@ -664,8 +354,8 @@
     <div class="col-md-5 col-lg-4 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered" data-bg-img-src="assets/img/bg/secondary.png">
       <div class="text-center">
         <img class="img-fluid mb-3" src="assets/img-temp/500x320/img1.png" alt="Image Description">
-        <h3 class="h5 u-link-v5 g-color-primary--hover g-font-weight-400 mb-3">Sneaker Shoes for Man</h3>
-        <span class="g-color-primary g-font-weight-700 g-font-size-20">$45.00</span>
+        <h3 class="h5 u-link-v5 g-color-primary--hover g-font-weight-400 mb-3">{{$produtos->products_name}}</h3>
+        <span class="g-color-primary g-font-weight-700 g-font-size-20">{{$produtos->products_price}}</span>
       </div>
 
       <a class="u-link-v2" href="#"></a>
@@ -678,28 +368,32 @@
 <div class="container g-pt-100 g-pb-70">
   <div class="text-center mx-auto g-max-width-600 g-mb-50">
     <h2 class="g-color-black mb-4">Blog News</h2>
+
     <p class="lead">Keep in touch with the latest blogs &amp; news.</p>
   </div>
 
+
   <div class="row g-mx-minus-10">
+    @foreach($listaPost as $post)
     <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
+
       <!-- Blog Background Overlay Blocks -->
       <article class="u-block-hover">
         <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="assets/img-temp/650x650/img1.jpg" alt="Image Description">
+          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="{{$post->img_blog}}" alt="Image Description">
         </div>
         <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
           <div class="u-block-hover__visible g-pa-25">
-            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">sport</span>
+            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">{{$post->categoria}}</span>
             <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">24 horas nas compras</a>
+              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">{{$post->titulo}}</a>
             </h2>
             <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
               By,
-              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
+              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">{{$post->autor}}</a>
             </h4>
             <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
+            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">{{$post->dateblog}}</span>
           </div>
 
           <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
@@ -708,58 +402,10 @@
       <!-- End Blog Background Overlay Blocks -->
     </div>
 
-    <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-      <!-- Blog Background Overlay Blocks -->
-      <article class="u-block-hover">
-        <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="assets/img-temp/650x650/img2.jpg" alt="Image Description">
-        </div>
-        <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-          <div class="u-block-hover__visible g-pa-25">
-            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">design</span>
-            <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">How to Design with Colors</a>
-            </h2>
-            <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-              By,
-              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
-            </h4>
-            <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
-          </div>
-
-          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
-        </div>
-      </article>
-      <!-- End Blog Background Overlay Blocks -->
-    </div>
-
-    <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-      <!-- Blog Background Overlay Blocks -->
-      <article class="u-block-hover">
-        <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="assets/img-temp/650x650/img3.jpg" alt="Image Description">
-        </div>
-        <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-          <div class="u-block-hover__visible g-pa-25">
-            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">photography</span>
-            <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">Stunning feiminina's Capture</a>
-            </h2>
-            <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-              By,
-              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
-            </h4>
-            <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
-          </div>
-
-          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
-        </div>
-      </article>
-      <!-- End Blog Background Overlay Blocks -->
-    </div>
+    @endforeach
   </div>
+
+
 </div>
 <!-- End News -->
 

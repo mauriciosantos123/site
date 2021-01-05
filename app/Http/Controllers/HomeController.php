@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ProductsModel;
 use App\Models\CategoriaModel;
+use App\Models\PostModel;
 
 
 class HomeController extends Controller
@@ -40,13 +41,13 @@ class HomeController extends Controller
         $nomes[] = "categoria_models.name as categoria_name";
 
 
-        $data['listaProdutos'] = ProductsModel::select($nomes)->leftJoin('categoria_models', 'categoria_models.categoria_id', '=', 'products.categoria')->where('destaque','1')->get();
+        $data['listaProdutos'] = ProductsModel::select($nomes)->leftJoin('categoria_models', 'categoria_models.categoria_id', '=', 'products.categoria')->where('destaque', '1')->get();
         //End Produtos
-
+        $data['listaProdutos2'] = ProductsModel::select($nomes)->leftJoin('categoria_models', 'categoria_models.categoria_id', '=', 'products.categoria')->where('destaque', '0')->get();
 
         //blog
 
-
+        $data['listaPost'] = PostModel::limit(3)->get();
 
         //end blog
 

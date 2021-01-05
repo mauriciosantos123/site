@@ -19,7 +19,7 @@
         <i class="g-color-gray-light-v2 g-ml-5 fa fa-angle-right"></i>
       </li>
       <li class="list-inline-item g-color-primary">
-        <span>Single Product 1</span>
+        <span>Produto</span>
       </li>
     </ul>
   </div>
