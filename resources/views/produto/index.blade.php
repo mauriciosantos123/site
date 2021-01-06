@@ -674,83 +674,35 @@
   </div>
 
   <div class="row g-mx-minus-10">
+    @foreach($listaPost as $post)
     <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
+
       <!-- Blog Background Overlay Blocks -->
       <article class="u-block-hover">
         <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="assets/img-temp/650x650/img1.jpg" alt="Image Description">
+          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="{{$post->img_blog}}" alt="Image Description">
         </div>
         <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
           <div class="u-block-hover__visible g-pa-25">
-            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">sport</span>
+            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">{{$post->categoria}}</span>
             <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">24 Hours in Shopping</a>
+              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">{{$post->titulo}}</a>
             </h2>
             <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
               By,
-              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
+              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">{{$post->autor}}</a>
             </h4>
             <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
+            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">{{$post->dateblog}}</span>
           </div>
 
-          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
+          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="{{route('post.index','id='.$post->blog_id)}}">Saiba mais</a>
         </div>
       </article>
       <!-- End Blog Background Overlay Blocks -->
     </div>
 
-    <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-      <!-- Blog Background Overlay Blocks -->
-      <article class="u-block-hover">
-        <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="assets/img-temp/650x650/img2.jpg" alt="Image Description">
-        </div>
-        <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-          <div class="u-block-hover__visible g-pa-25">
-            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">design</span>
-            <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">How to Design with Colors</a>
-            </h2>
-            <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-              By,
-              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
-            </h4>
-            <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
-          </div>
-
-          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
-        </div>
-      </article>
-      <!-- End Blog Background Overlay Blocks -->
-    </div>
-
-    <div class="col-sm-6 col-md-4 g-px-10 g-mb-30">
-      <!-- Blog Background Overlay Blocks -->
-      <article class="u-block-hover">
-        <div class="g-bg-cover g-bg-white-gradient-opacity-v1--after">
-          <img class="d-flex align-items-end u-block-hover__main--mover-down" src="assets/img-temp/650x650/img3.jpg" alt="Image Description">
-        </div>
-        <div class="u-block-hover__additional--partially-slide-up text-center g-z-index-1 mt-auto">
-          <div class="u-block-hover__visible g-pa-25">
-            <span class="d-block g-color-white-opacity-0_7 g-font-size-13 mb-2">photography</span>
-            <h2 class="h4 g-color-white g-font-weight-400 mb-3">
-              <a class="u-link-v5 g-color-white g-color-primary--hover g-cursor-pointer" href="#">Stunning Woman's Capture</a>
-            </h2>
-            <h4 class="d-inline-block g-color-white-opacity-0_7 g-font-size-11 mb-0">
-              By,
-              <a class="g-color-white-opacity-0_7 text-uppercase" href="#">Dan Shaw</a>
-            </h4>
-            <span class="g-color-white-opacity-0_7 g-pos-rel g-top-2 mx-2">&#183;</span>
-            <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">May 31, 2017</span>
-          </div>
-
-          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
-        </div>
-      </article>
-      <!-- End Blog Background Overlay Blocks -->
-    </div>
+    @endforeach
   </div>
 </div>
 <!-- End News -->

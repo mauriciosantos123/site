@@ -18,11 +18,11 @@ class PostController extends Controller
         // Verificar como pegar o unico id 
         $id = $request->id;
         if (empty($id)) {
-            return redirect()->to('post');
+            return redirect()->to('home');
         } else {
-            $data['registro'] = PostModel::findOrFail($id);
+            $data['posts'] = PostModel::findOrFail($id);
         }
-        return view('post.index', $data);
+        return view('blog.index', $data);
         //end verificar}
     }
 }

@@ -99,13 +99,18 @@ class AccountController extends Controller
     }
 
     // Fim SignUp-----------------------------------------------------
-    public function logout()
+    public function logout(Request $request)
     {
-        return view('login.index');
+        $request->session()->flush();
+        $request->session()->put('auth', 0);
+
+        return redirect()->to('home');
+        
     }
     public function forgot()
     {
         return view('acount.forgot');
+        
     }
     public function orders()
     {

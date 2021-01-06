@@ -151,7 +151,7 @@
           <span class="d-block g-color-black">{{$categoria->name}}</span>
           <h2 class="h1 mb-0">{{$categoria->collection}}</h2>
         </div>
-        <a class="u-link-v2" href="{{route('categoria.index')}}"></a>
+        <a class="u-link-v2" href="{{route('categoria.index','id='.$categoria->categoria_id)}}"></a>
       </article>
     </div>
 
@@ -181,7 +181,7 @@
           <img class="img-fluid" data-lazy="{{$produtos->products_img_destaque}}" alt="Image Description">
 
           <figcaption class="w-100 g-bg-primary g-bg-black--hover text-center g-pos-abs g-bottom-0 g-transition-0_2 g-py-5">
-            <a class="g-color-white g-font-size-11 text-uppercase g-letter-spacing-1 g-text-underline--none--hover" href="{{route('produto.index')}}">Novidades</a>
+            <a class="g-color-white g-font-size-11 text-uppercase g-letter-spacing-1 g-text-underline--none--hover" href="{{route('produto.index','id='.$produtos->product_id)}}">Novidades</a>
           </figcaption>
         </figure>
 
@@ -241,7 +241,7 @@
           <p class="lead">Queremos criar uma pratica Bonita e moderna para a terra.</p>
         </div>
 
-        <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25 g-mb-70" href="#">Compre agora</a>
+        <a class="btn u-btn-primary g-font-size-12 text-uppercase g-py-12 g-px-25 g-mb-70" href="{{route('produto.index','id'.$produtos->id)}}">Compre agora</a>
 
         <!-- Countdown -->
         <div class="text-uppercase">
@@ -301,7 +301,7 @@
         <!-- Article Info -->
         <div class="media-body align-self-center">
           <h4 class="h5 g-mb-7">
-            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index')}}">{{$produtos->products_name}}</a>
+            <a class="g-color-black g-color-primary--hover g-text-underline--none--hover" href="{{route('produto.index','id='.$produtos->product_id)}}">{{$produtos->products_name}}</a>
           </h4>
           <a class="d-inline-block g-color-gray-dark-v5 g-font-size-13 g-mb-10" href="#">{{$produtos->categoria_name}}</a>
           <!-- End Article Info -->
@@ -348,7 +348,7 @@
         <span class="u-link-v5 g-color-black g-color-primary--hover g-font-size-18">Compre agora</span>
       </div>
 
-      <a class="u-link-v2" href="#"></a>
+      <a class="u-link-v2" href="{{route('categoria.index','id='.$categoria->categoria_id)}}"></a>
     </div>
 
     <div class="col-md-5 col-lg-4 u-block-hover g-bg-size-cover g-min-height-500 g-flex-centered" data-bg-img-src="assets/img/bg/secondary.png">
@@ -358,7 +358,7 @@
         <span class="g-color-primary g-font-weight-700 g-font-size-20">{{$produtos->products_price}}</span>
       </div>
 
-      <a class="u-link-v2" href="#"></a>
+      <a class="u-link-v2" href="{{route('categoria.index','id='.$produtos->product_id)}}"></a>
     </div>
   </div>
 </div>
@@ -396,7 +396,7 @@
             <span class="g-color-white-opacity-0_7 g-font-size-10 text-uppercase">{{$post->dateblog}}</span>
           </div>
 
-          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="#">Read more</a>
+          <a class="d-inline-block g-brd-bottom g-brd-white g-color-white g-font-weight-500 g-font-size-12 text-uppercase g-text-underline--none--hover g-mb-30" href="{{route('post.index','id='.$post->blog_id)}}">Saiba mais</a>
         </div>
       </article>
       <!-- End Blog Background Overlay Blocks -->

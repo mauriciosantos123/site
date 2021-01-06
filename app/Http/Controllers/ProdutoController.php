@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ProductsModel;
+use App\Models\PostModel;
 
 class ProdutoController extends Controller
 {
@@ -14,8 +15,9 @@ class ProdutoController extends Controller
 
 
         $data['listaProdutos'] = ProductsModel::get();
-
-
+        // blog
+        $data['listaPost'] = PostModel::limit(3)->get();
+        // end blog
         // Verificar como pegar o unico id 
         $id = $request->id;
         if (empty($id)) {

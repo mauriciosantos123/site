@@ -113,6 +113,11 @@
                                                     Minhas compras
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a class="d-block g-color-black g-color-primary--hover g-text-underline--none--hover g-font-weight-400 g-py-5 g-px-20" href="{{route('account.logout')}}">
+                                                    Sair
+                                                </a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <!-- End Account -->
