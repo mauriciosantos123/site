@@ -84,7 +84,7 @@
 
       <div class="text-center">
         <p class="g-color-gray-dark-v5 mb-0">Ja tem cadastro ?
-          <a class="g-font-weight-600" href="page-login-1.html">Entrar</a>
+          <a class="g-font-weight-600" href="{{route('account.login')}}">Entrar</a>
         </p>
       </div>
     </div>

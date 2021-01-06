@@ -29,7 +29,7 @@ class AccountController extends Controller
     {
         $data = array();
         
-        return view('acount.login', $data);
+        return view('acount.index', $data);
     }
     // ----------------Parte de login 
     public function login(Request $request)
@@ -55,7 +55,7 @@ class AccountController extends Controller
                 if (($res->password == $request->password) && (strlen($teste) > 0) ) {
                     $request->session()->put('id',  $res->id);
                     $request->session()->put('auth',  1);
-                    return redirect()->to('home');
+                    return redirect()->to('account');
                 } else {
                     $request->session()->put('auth',  0);
                   
